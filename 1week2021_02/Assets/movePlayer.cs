@@ -21,6 +21,7 @@ Vector3 prevPos;
     // Update is called once per frame
     void Update()
     {
+		
         if (transform.position == target) {
 			SetTargetPosition ();
 		}
@@ -30,22 +31,36 @@ Vector3 prevPos;
     void SetTargetPosition(){
  
 		prevPos = target;
+		
+		if(this.transform.position.x != 4.2f){
  
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			target = transform.position + MOVEX;
 			return;
 		}
+		}
+
+		if(this.transform.position.x != -4.2f){
+		
+		
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			target = transform.position - MOVEX;
 			return;
 		}
+		}
+
+		if(this.transform.position.y != 4.2f){
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			target = transform.position + MOVEY;
 			return;
 		}
+		}
+
+		if(this.transform.position.y != -4.2f){
 		if (Input.GetKey (KeyCode.DownArrow)) {
 			target = transform.position - MOVEY;
 			return;
+		}
 		}
 	}
     void Move(){
