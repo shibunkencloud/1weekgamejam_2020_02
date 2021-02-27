@@ -5,9 +5,9 @@ using UnityEngine;
 public class moveCharactor : MonoBehaviour
 {
 
-    Vector3 MOVEX = new Vector3(35f, 0f, 0f);
-    Vector3 MOVEY = new Vector3(0f, 35f, 0f);
-    float step = 90f;
+    Vector3 MOVEX = new Vector3(0.6f, 0f, 0f);
+    Vector3 MOVEY = new Vector3(0f, 0.6f, 0f);
+    float step = 2f;
     Vector3 target;
     Vector3 prevPos;
 
@@ -34,7 +34,7 @@ public class moveCharactor : MonoBehaviour
 
         prevPos = target;
 
-        if (this.transform.position.x != 4.2f)
+        if (this.transform.position.x < 4.1f)
         {
 
             if (Input.GetKey(KeyCode.RightArrow))
@@ -44,7 +44,7 @@ public class moveCharactor : MonoBehaviour
             }
         }
 
-        if (this.transform.position.x != -4.2f)
+        if (this.transform.position.x > -4.1f)
         {
 
 
@@ -55,7 +55,7 @@ public class moveCharactor : MonoBehaviour
             }
         }
 
-        if (this.transform.position.y != 4.2f)
+        if (this.transform.position.y < 4.5f)
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
@@ -64,7 +64,7 @@ public class moveCharactor : MonoBehaviour
             }
         }
 
-        if (this.transform.position.y != -4.2f)
+        if (this.transform.position.y > -3.7f)
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {
