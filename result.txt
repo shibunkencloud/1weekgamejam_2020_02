@@ -11,3 +11,57 @@ Wed Feb 24 20:15:10     2021
 pull_count
 Wed Feb 24 20:15:20     2021
 pull_count
+Sat Feb 27 15:17:03     2021
+Updating 7b17509..e13690c
+Fast-forward
+ 1week2021_02/Assets/New Material.mat               |   77 +
+ 1week2021_02/Assets/New Material.mat.meta          |    8 +
+ 1week2021_02/Assets/Scenes/SampleScene.unity       | 3035 +++++++++++++++++++-
+ 1week2021_02/Assets/movePlayer.cs                  |   69 +
+ 1week2021_02/Assets/movePlayer.cs.meta             |   11 +
+ 1week2021_02/Library/ArtifactDB                    |  Bin 16777216 -> 16777216 bytes
+ .../Artifacts/02/02c0d5b35ef1d30479f8d06687c47510  |  Bin 0 -> 4628 bytes
+ .../Artifacts/06/06ddc3cdab0fa46555befce190c720c6  |  Bin 0 -> 5676 bytes
+ .../Artifacts/24/24ef548e6d2608fd85f47377f4d9db74  |  Bin 0 -> 5672 bytes
+ .../Artifacts/34/34bd1caac5b91e4ab63ed896ac945a01  |  Bin 0 -> 9983 bytes
+ .../Artifacts/54/54064a5d8501d75eedb077f763c6dabe  |  Bin 0 -> 5180 bytes
+ .../Artifacts/57/579a6591f10d5b488cdf1fd58ef16cb0  |  Bin 0 -> 4168 bytes
+ .../Artifacts/a8/a8042db33b6a0a727a148b7fea79f8c7  |  Bin 0 -> 5596 bytes
+ .../Artifacts/ac/ac14becfdb4e14bbf23289431b3cc4f2  |  Bin 0 -> 4612 bytes
+ .../Artifacts/c3/c364c1b2e1d7909b3340c5bc3c2add8b  |  Bin 0 -> 5676 bytes
+ .../Artifacts/ca/ca91ae5e4b39ad69290b9ca4b62b9166  |  Bin 0 -> 5184 bytes
+ 1week2021_02/Library/CurrentLayout-default.dwlt    |  183 +-
+ 1week2021_02/Library/InspectorExpandedItems.asset  |  Bin 4104 -> 4132 bytes
+ .../Library/ScriptAssemblies/Assembly-CSharp.dll   |  Bin 0 -> 4608 bytes
+ .../9/9f309e1af715e43f9d91e74a2f9160b6.bin         |  Bin 0 -> 500 bytes
+ .../Library/ShaderCache/EditorEncounteredVariants  |  Bin 4336 -> 4580 bytes
+ .../b/be51d264f8e9a7e9cc5ad13fbe5071db.bin         |  Bin 0 -> 1184 bytes
+ 1week2021_02/Library/SourceAssetDB                 |  Bin 2097152 -> 2097152 bytes
+ .../StateCache/SceneView/508a16-mainStage.json     |    2 +-
+ .../shadercompiler-UnityShaderCompiler.exe1.log    |    2 +
+ .../shadercompiler-UnityShaderCompiler.exe2.log    |    2 +
+ .../shadercompiler-UnityShaderCompiler.exe3.log    |    2 +
+ .../shadercompiler-UnityShaderCompiler.exe4.log    |    2 +
+ 28 files changed, 3273 insertions(+), 120 deletions(-)
+ create mode 100644 1week2021_02/Assets/New Material.mat
+ create mode 100644 1week2021_02/Assets/New Material.mat.meta
+ create mode 100644 1week2021_02/Assets/movePlayer.cs
+ create mode 100644 1week2021_02/Assets/movePlayer.cs.meta
+ create mode 100644 1week2021_02/Library/Artifacts/02/02c0d5b35ef1d30479f8d06687c47510
+ create mode 100644 1week2021_02/Library/Artifacts/06/06ddc3cdab0fa46555befce190c720c6
+ create mode 100644 1week2021_02/Library/Artifacts/24/24ef548e6d2608fd85f47377f4d9db74
+ create mode 100644 1week2021_02/Library/Artifacts/34/34bd1caac5b91e4ab63ed896ac945a01
+ create mode 100644 1week2021_02/Library/Artifacts/54/54064a5d8501d75eedb077f763c6dabe
+ create mode 100644 1week2021_02/Library/Artifacts/57/579a6591f10d5b488cdf1fd58ef16cb0
+ create mode 100644 1week2021_02/Library/Artifacts/a8/a8042db33b6a0a727a148b7fea79f8c7
+ create mode 100644 1week2021_02/Library/Artifacts/ac/ac14becfdb4e14bbf23289431b3cc4f2
+ create mode 100644 1week2021_02/Library/Artifacts/c3/c364c1b2e1d7909b3340c5bc3c2add8b
+ create mode 100644 1week2021_02/Library/Artifacts/ca/ca91ae5e4b39ad69290b9ca4b62b9166
+ create mode 100644 1week2021_02/Library/ScriptAssemblies/Assembly-CSharp.dll
+ create mode 100644 1week2021_02/Library/ShaderCache/9/9f309e1af715e43f9d91e74a2f9160b6.bin
+ create mode 100644 1week2021_02/Library/ShaderCache/b/be51d264f8e9a7e9cc5ad13fbe5071db.bin
+ create mode 100644 1week2021_02/Library/shadercompiler-UnityShaderCompiler.exe1.log
+ create mode 100644 1week2021_02/Library/shadercompiler-UnityShaderCompiler.exe2.log
+ create mode 100644 1week2021_02/Library/shadercompiler-UnityShaderCompiler.exe3.log
+ create mode 100644 1week2021_02/Library/shadercompiler-UnityShaderCompiler.exe4.log
+pull_count

@@ -16,11 +16,13 @@ Vector3 prevPos;
     void Start()
     {
         target = transform.position;
+		
     }
 
     // Update is called once per frame
     void Update()
     {
+		
 		
         if (transform.position == target) {
 			SetTargetPosition ();
@@ -29,13 +31,39 @@ Vector3 prevPos;
 	    }
         
     void SetTargetPosition(){
+
+		GameObject obj = (GameObject)Resources.Load("downBrock");
  
 		prevPos = target;
 		
 		if(this.transform.position.x != 4.2f){
  
 		if (Input.GetKey (KeyCode.RightArrow)) {
+
 			target = transform.position + MOVEX;
+
+			int ran = UnityEngine.Random.Range(0,5);
+
+			if(ran == 0){
+			Instantiate(obj,new Vector3(-1.2f,4.2f,0.0f),Quaternion.identity);
+			}
+
+			if(ran == 1){
+			Instantiate(obj,new Vector3(-0.6f,4.2f,0.0f),Quaternion.identity);
+			}
+
+			if(ran == 2){
+			Instantiate(obj,new Vector3(0.0f,4.2f,0.0f),Quaternion.identity);
+			}
+
+			if(ran == 3){
+			Instantiate(obj,new Vector3(0.6f,4.2f,0.0f),Quaternion.identity);
+			}
+
+			if(ran == 4){
+			Instantiate(obj,new Vector3(1.2f,4.2f,0.0f),Quaternion.identity);
+			}
+
 			return;
 		}
 		}
