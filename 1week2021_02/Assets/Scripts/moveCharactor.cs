@@ -59,7 +59,6 @@ public class moveCharactor : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        Debug.Log(collision.gameObject.name);
         switch (collision.gameObject.name)
         {
             case "leftBrock(Clone)":
@@ -106,13 +105,17 @@ public class moveCharactor : MonoBehaviour
 
         GameObject obj = (GameObject)Resources.Load("downBrock");
         GameObject lobj = (GameObject)Resources.Load("leftBrock");
+        GameObject robj = (GameObject)Resources.Load("rightBrock");
+        GameObject uobj = (GameObject)Resources.Load("upBrock");
 
         prevPos = target;
         if (Input.GetKey(KeyCode.RightArrow))
         {
             target = transform.position + MOVEX;
 
-            int ran = UnityEngine.Random.Range(0, 5);
+            int ran = UnityEngine.Random.Range(0, 13);
+
+            //down
 
             if (ran == 0)
             {
@@ -163,6 +166,35 @@ public class moveCharactor : MonoBehaviour
             {
                 Instantiate(obj, new Vector3(2.4f, 4.2f, 0.0f), Quaternion.identity);
             }
+
+            if (ran == 0)
+            {
+                Instantiate(obj, new Vector3(3.0f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(obj, new Vector3(-3.0f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(obj, new Vector3(-3.6f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(obj, new Vector3(-3.6f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(obj, new Vector3(4.0f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            //left
+
+
 
             if (ran == 0)
             {
@@ -243,6 +275,83 @@ public class moveCharactor : MonoBehaviour
             if (ran == 3)
             {
                 Instantiate(lobj, new Vector3(-4.2f, -0.6f, 0.0f), Quaternion.identity);
+            }
+
+            //up
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(0.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.6f,-4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(-3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(4.0f, -4.2f, 0.0f), Quaternion.identity);
             }
 
             flag = !flag;
