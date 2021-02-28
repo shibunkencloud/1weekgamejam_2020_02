@@ -4,11 +4,15 @@ using UnityEngine;
 
 using UnityEngine.SceneManagement;
 
-public class startButton : MonoBehaviour
+public class button : MonoBehaviour
 {
    public void OnClickStartButton()
     {
         SceneManager.LoadScene("Description");
+    }
+    public void OnClickOkButton()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 
 }
