@@ -29,12 +29,12 @@ public class changeSceneManager : MonoBehaviour
             count += 1;
             FadeManager.Instance.LoadScene("GameOver", 0.5f);
         }
-        else if(script2.gameOverFlag && count == 0)
+        if(script2.gameOverFlag && count == 0)
         {
             count += 1;
             FadeManager.Instance.LoadScene("GameOver", 0.5f);
         }
-        else if (script.gameClearFlag && count == 0)
+        if (script.gameClearFlag && count == 0)
         {
             count += 1;
             FadeManager.Instance.LoadScene("clear", 0.5f);

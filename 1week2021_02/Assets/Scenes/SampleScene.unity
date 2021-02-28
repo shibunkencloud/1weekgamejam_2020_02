@@ -2676,6 +2676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 2010191120}
+  hataki: {fileID: 2631073660758354230, guid: 18070c9695bf2064e9471952f88d26e1, type: 3}
 --- !u!1 &1683082188
 GameObject:
   m_ObjectHideFlags: 0
