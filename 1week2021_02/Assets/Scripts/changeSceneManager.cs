@@ -8,9 +8,12 @@ public class changeSceneManager : MonoBehaviour
     moveCharactor script;
     public GameObject chara;
 
+    int count;
+
     // Start is called before the first frame update
     void Start()
     {
+        count = 0;
         script = chara.GetComponent<moveCharactor>();
     }
 
@@ -18,12 +21,13 @@ public class changeSceneManager : MonoBehaviour
     void Update()
     {
 
-        if (script.gameOverFlag)
+        if (script.gameOverFlag && count == 0)
         {
+            count += 1;
             FadeManager.Instance.LoadScene("GameOver", 0.5f);
-        }
-        if (script.gameClearFlag)
+        }else if (script.gameClearFlag && count == 10)
         {
+            count += 1;
             FadeManager.Instance.LoadScene("clear", 0.5f);
         }
     }

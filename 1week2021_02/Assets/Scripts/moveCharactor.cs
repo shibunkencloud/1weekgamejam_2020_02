@@ -1108,7 +1108,7 @@ public class moveCharactor : MonoBehaviour
             }
             flag = !flag;
             vector = 2;
-            if (this.transform.position.y < 4.5f)
+            if (this.transform.position.y < 4.1f)
             {
                 target = transform.position + MOVEY;
                 return;
