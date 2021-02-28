@@ -75,7 +75,7 @@ public class moveCharactor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        Debug.Log(collision.gameObject.name);
         switch (collision.gameObject.name)
         {
             case "leftBrock(Clone)":
@@ -117,7 +117,7 @@ public class moveCharactor : MonoBehaviour
                 }
                 else
                 {
-                    Vector3 tmp = script.target;
+                    Vector3 tmp = script3.target;
                     tmp.x = tmp.x - 0.6f;
                     target.x = tmp.x;
                     Move();
@@ -132,7 +132,7 @@ public class moveCharactor : MonoBehaviour
                 }
                 else
                 {
-                    Vector3 tmp = script.target;
+                    Vector3 tmp = script4.target;
                     tmp.y = tmp.y + 0.6f;
                     target.y = tmp.y;
                     Move();
