@@ -17,7 +17,7 @@ public class changeSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(script.gameOverFlag);
+
         if (script.gameOverFlag)
         {
             ChageScene();
