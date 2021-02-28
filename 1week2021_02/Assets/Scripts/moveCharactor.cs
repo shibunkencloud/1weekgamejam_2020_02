@@ -48,6 +48,7 @@ public class moveCharactor : MonoBehaviour
     {
         
         gameOverFlag = false;
+        gameClearFlag = false;
         count = 0;
         target = transform.position;
         MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -65,7 +66,7 @@ public class moveCharactor : MonoBehaviour
             centerFlas = true;
             Destroy(center);
             GameObject obj = (GameObject)Resources.Load("hataki");
-            Instantiate(obj, new Vector3(0.6f, -0.6f, -8.0f), Quaternion.identity);
+            Instantiate(obj, new Vector3(0.6f, -0.6f, -9.0f), Quaternion.identity);
             flag3 = false;
 
         }
@@ -152,7 +153,7 @@ public class moveCharactor : MonoBehaviour
                 Debug.Log(count);
                 break;
 
-            case "hataki":
+            case "hataki(Clone)":
                 script5 = collision.GetComponent<hataki>();
                 gameClearFlag = true;
                 break;
