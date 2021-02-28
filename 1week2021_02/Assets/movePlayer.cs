@@ -1,21 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class movePlayer : MonoBehaviour
 {
+
+public static int count;
 
 Vector3 MOVEX = new Vector3(0.6f, 0f, 0f); 
 Vector3 MOVEY = new Vector3(0f, 0.6f, 0f); 
 float step = 2f; 
 Vector3 target;      
 Vector3 prevPos;   
+public GameObject player;
+public Text cleartext;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         target = transform.position;
+		count = 0;
 		
     }
 
@@ -27,7 +35,11 @@ Vector3 prevPos;
 			SetTargetPosition ();
 		}
 		Move();
-	    }
+		
+		if(count >= 4){
+			clear();
+		}
+	}
         
     void SetTargetPosition(){
 
@@ -494,7 +506,26 @@ Vector3 prevPos;
 		}
 		}
 	}
+
     void Move(){
 		transform.position = Vector3.MoveTowards (transform.position, target, step * Time.deltaTime);
 	}
+	
+	public static void addcount(int c){
+		count += c;
+	}
+
+	public static int getcount(){
+		return count;
+	}
+
+	void clear(){
+		Destroy(player);
+		cleartext.enabled = true;
+		if(Input.GetMouseButtonDown(0)){
+			//Application.LoadLevel("Title")
+		}
+	}
+
+
 }
