@@ -8,8 +8,7 @@ public class changeSceneManager : MonoBehaviour
     moveCharactor script;
     hataki script2;
     public GameObject chara;
-    public GameObject hataki;
-
+    private
     int count;
 
     // Start is called before the first frame update
@@ -17,12 +16,18 @@ public class changeSceneManager : MonoBehaviour
     {
         count = 0;
         script = chara.GetComponent<moveCharactor>();
-        script2 = hataki.GetComponent<hataki>();
+        //script2 = hataki.GetComponent<hataki>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (script.hataki)
+        {
+            GameObject hataki = GameObject.Find("hataki(Clone)");
+            script2 = hataki.GetComponent<hataki>();
+        }
+        
 
         if (script.gameOverFlag && count == 0)
         {
