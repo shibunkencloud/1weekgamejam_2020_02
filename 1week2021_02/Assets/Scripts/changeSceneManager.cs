@@ -20,12 +20,8 @@ public class changeSceneManager : MonoBehaviour
 
         if (script.gameOverFlag)
         {
-            ChageScene();
+            FadeManager.Instance.LoadScene("GameOver", 0.5f);
         }
     }
 
-    void ChageScene()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
 }

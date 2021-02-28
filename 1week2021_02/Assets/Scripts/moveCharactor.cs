@@ -1444,4 +1444,5 @@ public class moveCharactor : MonoBehaviour
             gameOverFlag = true;
         }
     }
+
 }
