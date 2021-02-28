@@ -22,6 +22,10 @@ public class changeSceneManager : MonoBehaviour
         {
             FadeManager.Instance.LoadScene("GameOver", 0.5f);
         }
+        if (script.gameClearFlag)
+        {
+            FadeManager.Instance.LoadScene("clear", 0.5f);
+        }
     }
 
 }
