@@ -8,8 +8,8 @@ public class downBrock : MonoBehaviour
     Vector3 MOVEX = new Vector3(0.6f, 0f, 0f); 
     Vector3 MOVEY = new Vector3(0f, 0.6f, 0f); 
     float step = 2f; 
-    Vector3 target;      
-    Vector3 prevPos;  
+    public Vector3 target;      
+    public Vector3 prevPos;  
     // Start is called before the first frame update
     void Start()
     {

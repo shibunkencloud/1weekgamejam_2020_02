@@ -24,41 +24,77 @@ public class moveCharactor : MonoBehaviour
     Vector3 prevPos;
     int vector= 0;
     bool flag = true;
+    bool flag2 = true;
+
+    leftBrock script;
+    downBrock script2;
+    Collider2D col2D;
+
+    public bool gameOverFlag = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameOverFlag = false;
         target = transform.position;
         MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         MainSpriteRenderer.sprite = DownSprite1;
+        col2D = gameObject.GetComponent<Collider2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(gameOverFlag);
         if (transform.position == target)
         {
             SetTargetPosition();
             ChangeVector();
         }
         Move();
+        checkAria();
         
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Vector3 tmp = collision.gameObject.transform.position;
-        Debug.Log(tmp);
-        if(tmp.y + 0.4f == transform.position.y)
-        {
-            Debug.Log("t");
-            Debug.Log(tmp);
-            tmp.x = tmp.x + 0.6f;
-            target.x = tmp.x;
-        }
-        
 
-        Move();
+        Debug.Log(collision.gameObject.name);
+        switch (collision.gameObject.name)
+        {
+            case "leftBrock(Clone)":
+                script = collision.GetComponent<leftBrock>();
+                if(script.prevPos.x == transform.position.x)
+                {
+                    target = prevPos;
+                    Move();
+                }
+                else
+                {
+                    Vector3 tmp = script.target;
+                    tmp.x = tmp.x + 0.6f;
+                    target.x = tmp.x;
+                    Move();
+                }
+                break;
+            case "downBrock(Clone)":
+                script2 = collision.GetComponent<downBrock>();
+                if (script2.prevPos.y == transform.position.y)
+                {
+                    target = prevPos;
+                    Move();
+                }
+                else
+                {
+                    Vector3 tmp = script2.target;
+                    tmp.y = tmp.y - 0.6f;
+                    target.y = tmp.y;
+                    Move();
+                }
+                break;
+        }
+
 
     }
 
@@ -101,7 +137,7 @@ public class moveCharactor : MonoBehaviour
         {
             flag = !flag;
             vector = 0;
-            if (this.transform.position.y > -3.7f)
+            if (this.transform.position.y > -4.1f)
             {
                 target = transform.position - MOVEY;
                 return;
@@ -158,6 +194,14 @@ public class moveCharactor : MonoBehaviour
                     MainSpriteRenderer.sprite = LeftSprite2;
                 }
                 break;
+        }
+    }
+
+    void checkAria()
+    {
+        if(transform.position.x > 4.2f || transform.position.x < -4.2f || transform.position.y > 4.2f || transform.position.y < -4.2f)
+        {
+            gameOverFlag = true;
         }
     }
 }
