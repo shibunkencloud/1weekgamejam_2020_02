@@ -38,6 +38,7 @@ public class moveCharactor : MonoBehaviour
     public bool gameOverFlag = false;
     public bool gameClearFlag = false;
     public bool centerFlas = false;
+    public bool hataki = false;
     public GameObject center;
     private int count = 0;
 
@@ -68,6 +69,8 @@ public class moveCharactor : MonoBehaviour
             GameObject obj = (GameObject)Resources.Load("hataki");
             Instantiate(obj, new Vector3(0.6f, -0.6f, -9.0f), Quaternion.identity);
             flag3 = false;
+            hataki = true;
+
 
         }
        
@@ -83,7 +86,7 @@ public class moveCharactor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+
         switch (collision.gameObject.name)
         {
             case "leftBrock(Clone)":

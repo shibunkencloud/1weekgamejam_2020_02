@@ -136,3 +136,11 @@ Fast-forward
  create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Scripts/FadeManager.cs
  create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Scripts/FadeManager.cs.meta
 pull_count
+Sun Feb 28 21:18:51     2021
+Auto-merging 1week2021_02/Assets/Scripts/moveCharactor.cs
+Auto-merging 1week2021_02/Assets/Scripts/changeSceneManager.cs
+CONFLICT (content): Merge conflict in 1week2021_02/Assets/Scripts/changeSceneManager.cs
+Automatic merge failed; fix conflicts and then commit the result.
+pull_count
+Sun Feb 28 21:19:32     2021
+pull_count
