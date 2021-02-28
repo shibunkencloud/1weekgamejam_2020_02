@@ -28,6 +28,8 @@ public class moveCharactor : MonoBehaviour
 
     leftBrock script;
     downBrock script2;
+    rightBrock script3;
+    upBrock script4;
     Collider2D col2D;
 
     public bool gameOverFlag = false;
@@ -91,6 +93,36 @@ public class moveCharactor : MonoBehaviour
                     Move();
                 }
                 break;
+            case "rightBrock(Clone)":
+                script3 = collision.GetComponent<rightBrock>();
+                if (script3.prevPos.x == transform.position.x)
+                {
+                    target = prevPos;
+                    Move();
+                }
+                else
+                {
+                    Vector3 tmp = script.target;
+                    tmp.x = tmp.x - 0.6f;
+                    target.x = tmp.x;
+                    Move();
+                }
+                break;
+            case "upBrock(Clone)":
+                script4 = collision.GetComponent<upBrock>();
+                if (script4.prevPos.y == transform.position.y)
+                {
+                    target = prevPos;
+                    Move();
+                }
+                else
+                {
+                    Vector3 tmp = script.target;
+                    tmp.y = tmp.y + 0.6f;
+                    target.y = tmp.y;
+                    Move();
+                }
+                break;
             case "Cube (2)":
                 target = prevPos;
                 Move();
@@ -113,7 +145,7 @@ public class moveCharactor : MonoBehaviour
         {
             target = transform.position + MOVEX;
 
-            int ran = UnityEngine.Random.Range(0, 13);
+            int ran = UnityEngine.Random.Range(0, 25);
 
             //down
 
@@ -354,6 +386,91 @@ public class moveCharactor : MonoBehaviour
                 Instantiate(uobj, new Vector3(4.0f, -4.2f, 0.0f), Quaternion.identity);
             }
 
+            //right
+
+
+
+            if (ran == 0)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -0.6f, 0.0f), Quaternion.identity);
+            }
+
             flag = !flag;
             vector = 1;
             if (this.transform.position.x < 4.1f)
@@ -364,7 +481,7 @@ public class moveCharactor : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            int ran = UnityEngine.Random.Range(0, 5);
+            int ran = UnityEngine.Random.Range(0, 25);
 
             if (ran == 0)
             {
@@ -495,6 +612,165 @@ public class moveCharactor : MonoBehaviour
             if (ran == 3)
             {
                 Instantiate(lobj, new Vector3(-4.2f, -0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(0.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(-3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(4.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+            //right
+
+
+
+            if (ran == 0)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -0.6f, 0.0f), Quaternion.identity);
             }
             flag = !flag;
             vector = 3;
@@ -506,7 +782,7 @@ public class moveCharactor : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            int ran = UnityEngine.Random.Range(0, 5);
+            int ran = UnityEngine.Random.Range(0, 25);
 
             if (ran == 0)
             {
@@ -637,6 +913,165 @@ public class moveCharactor : MonoBehaviour
             if (ran == 3)
             {
                 Instantiate(lobj, new Vector3(-4.2f, -0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(0.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(4.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+            //right
+
+
+
+            if (ran == 0)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -0.6f, 0.0f), Quaternion.identity);
             }
             flag = !flag;
             vector = 2;
@@ -649,7 +1084,7 @@ public class moveCharactor : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            int ran = UnityEngine.Random.Range(0, 5);
+            int ran = UnityEngine.Random.Range(0, 25);
 
             if (ran == 0)
             {
@@ -780,6 +1215,165 @@ public class moveCharactor : MonoBehaviour
             if (ran == 3)
             {
                 Instantiate(lobj, new Vector3(-4.2f, -0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(0.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(0.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(1.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(-1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(1.8f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(2.4f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 0)
+            {
+                Instantiate(uobj, new Vector3(3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(uobj, new Vector3(-3.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(uobj, new Vector3(-3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(uobj, new Vector3(-3.6f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(uobj, new Vector3(4.0f, -4.2f, 0.0f), Quaternion.identity);
+            }
+            //right
+
+
+
+            if (ran == 0)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, 1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, 0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -2.4f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.0f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -3.6f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 4)
+            {
+                Instantiate(robj, new Vector3(4.2f, -4.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 1)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.8f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 2)
+            {
+                Instantiate(robj, new Vector3(4.2f, -1.2f, 0.0f), Quaternion.identity);
+            }
+
+            if (ran == 3)
+            {
+                Instantiate(robj, new Vector3(4.2f, -0.6f, 0.0f), Quaternion.identity);
             }
             flag = !flag;
             vector = 0;

@@ -23,7 +23,11 @@ public class downBrock : MonoBehaviour
 			SetTargetPosition ();
 		}
 		Move();
-	    }
+        if (transform.position.x > 4.2f || transform.position.x < -4.2f || transform.position.y > 4.2f || transform.position.y < -4.2f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     void SetTargetPosition(){
         prevPos = target;
