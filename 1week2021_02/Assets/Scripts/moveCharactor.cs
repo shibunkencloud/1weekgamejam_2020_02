@@ -30,14 +30,21 @@ public class moveCharactor : MonoBehaviour
     downBrock script2;
     rightBrock script3;
     upBrock script4;
+    hataki script5;
+    tile script6;
     Collider2D col2D;
 
     public bool gameOverFlag = false;
+    public bool gameClearFlag = false;
+    public bool centerFlas = false;
+    public GameObject center;
+    private int count = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         gameOverFlag = false;
+        count = 0;
         target = transform.position;
         MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         MainSpriteRenderer.sprite = DownSprite1;
@@ -48,6 +55,14 @@ public class moveCharactor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(count == 4)
+        {
+            centerFlas = true;
+            Destroy(center);
+
+            
+        }
+       
         if (transform.position == target)
         {
             SetTargetPosition();
@@ -123,6 +138,18 @@ public class moveCharactor : MonoBehaviour
                     Move();
                 }
                 break;
+            case "tile(Clone)":
+                script6 = collision.GetComponent<tile>();
+                count += 1;
+                Destroy(collision.gameObject);
+                Debug.Log(count);
+                break;
+
+            case "hataki":
+                script5 = collision.GetComponent<hataki>();
+                gameClearFlag = true;
+                break;
+
             case "Cube (2)":
                 target = prevPos;
                 Move();

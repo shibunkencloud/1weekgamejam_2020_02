@@ -50,3 +50,89 @@ Fast-forward
  create mode 100644 1week2021_02/Assets/charaCollision.cs
  create mode 100644 1week2021_02/Assets/charaCollision.cs.meta
 pull_count
+Sun Feb 28 18:13:33     2021
+Updating 261d265..0c55626
+Fast-forward
+ ...02\277\343\202\244\343\203\210\343\203\253.png" | Bin 0 -> 449175 bytes
+ ...7\343\202\244\343\203\210\343\203\253.png.meta" | 116 ++++
+ 1week2021_02/Assets/Images/game_over2.jpg          | Bin 0 -> 115391 bytes
+ 1week2021_02/Assets/Images/game_over2.jpg.meta     |  92 +++
+ 1week2021_02/Assets/New Material 2.mat             |  77 +++
+ 1week2021_02/Assets/New Material 2.mat.meta        |   8 +
+ 1week2021_02/Assets/Resources/New Material.mat     |  77 +++
+ .../Assets/Resources/New Material.mat.meta         |   8 +
+ 1week2021_02/Assets/Resources/game_over2.jpg       | Bin 0 -> 115391 bytes
+ 1week2021_02/Assets/Resources/game_over2.jpg.meta  |  92 +++
+ 1week2021_02/Assets/Resources/rightBrock.prefab    |  17 +-
+ 1week2021_02/Assets/Resources/upBrock.prefab       |  17 +-
+ 1week2021_02/Assets/Scenes/Description.unity       | 206 +++++++
+ 1week2021_02/Assets/Scenes/Description.unity.meta  |   7 +
+ 1week2021_02/Assets/Scenes/SampleScene.unity       | 127 +---
+ 1week2021_02/Assets/Scenes/title.unity             | 667 ++++++++++++++++++++
+ 1week2021_02/Assets/Scenes/title.unity.meta        |   7 +
+ 1week2021_02/Assets/Scripts/downBrock.cs           |   6 +-
+ 1week2021_02/Assets/Scripts/leftBrock.cs           |   6 +-
+ 1week2021_02/Assets/Scripts/moveCharactor.cs       | 680 +++++++++++++++++++--
+ 1week2021_02/Assets/Scripts/rightBrock.cs          |   8 +-
+ 1week2021_02/Assets/Scripts/startButton.cs         |  14 +
+ 1week2021_02/Assets/Scripts/startButton.cs.meta    |  11 +
+ 1week2021_02/Assets/Scripts/upBrock.cs             |   6 +-
+ 1week2021_02/Assets/testfolder.meta                |   8 +
+ 25 files changed, 2083 insertions(+), 174 deletions(-)
+ create mode 100644 "1week2021_02/Assets/Images/1week\343\202\277\343\202\244\343\203\210\343\203\253.png"
+ create mode 100644 "1week2021_02/Assets/Images/1week\343\202\277\343\202\244\343\203\210\343\203\253.png.meta"
+ create mode 100644 1week2021_02/Assets/Images/game_over2.jpg
+ create mode 100644 1week2021_02/Assets/Images/game_over2.jpg.meta
+ create mode 100644 1week2021_02/Assets/New Material 2.mat
+ create mode 100644 1week2021_02/Assets/New Material 2.mat.meta
+ create mode 100644 1week2021_02/Assets/Resources/New Material.mat
+ create mode 100644 1week2021_02/Assets/Resources/New Material.mat.meta
+ create mode 100644 1week2021_02/Assets/Resources/game_over2.jpg
+ create mode 100644 1week2021_02/Assets/Resources/game_over2.jpg.meta
+ create mode 100644 1week2021_02/Assets/Scenes/Description.unity
+ create mode 100644 1week2021_02/Assets/Scenes/Description.unity.meta
+ create mode 100644 1week2021_02/Assets/Scenes/title.unity
+ create mode 100644 1week2021_02/Assets/Scenes/title.unity.meta
+ create mode 100644 1week2021_02/Assets/Scripts/startButton.cs
+ create mode 100644 1week2021_02/Assets/Scripts/startButton.cs.meta
+ create mode 100644 1week2021_02/Assets/testfolder.meta
+pull_count
+Sun Feb 28 18:18:03     2021
+Updating 0c55626..9eb7b37
+Fast-forward
+ 1week2021_02/Assets/Scenes/Description.unity       | 461 +++++++++++++++
+ .../Assets/Scripts/{startButton.cs => button.cs}   |   6 +-
+ .../{startButton.cs.meta => button.cs.meta}        |   0
+ 1week2021_02/Assets/Scripts/changeSceneManager.cs  |   6 +-
+ 1week2021_02/Assets/Scripts/moveCharactor.cs       |   1 +
+ 1week2021_02/Assets/naichilab.meta                 |   9 +
+ 1week2021_02/Assets/naichilab/FadeManager.meta     |   9 +
+ .../Assets/naichilab/FadeManager/Prefabs.meta      |   9 +
+ .../FadeManager/Prefabs/FadeManager.prefab         |  47 ++
+ .../FadeManager/Prefabs/FadeManager.prefab.meta    |   8 +
+ .../Assets/naichilab/FadeManager/Sample.meta       |   9 +
+ .../naichilab/FadeManager/Sample/FadeSample.cs     |  11 +
+ .../FadeManager/Sample/FadeSample.cs.meta          |  12 +
+ .../naichilab/FadeManager/Sample/SampleScene.unity | 617 +++++++++++++++++++++
+ .../FadeManager/Sample/SampleScene.unity.meta      |   8 +
+ .../Assets/naichilab/FadeManager/Scripts.meta      |   9 +
+ .../naichilab/FadeManager/Scripts/FadeManager.cs   | 142 +++++
+ .../FadeManager/Scripts/FadeManager.cs.meta        |  12 +
+ .../ProjectSettings/EditorBuildSettings.asset      |   6 +
+ 19 files changed, 1376 insertions(+), 6 deletions(-)
+ rename 1week2021_02/Assets/Scripts/{startButton.cs => button.cs} (62%)
+ rename 1week2021_02/Assets/Scripts/{startButton.cs.meta => button.cs.meta} (100%)
+ create mode 100644 1week2021_02/Assets/naichilab.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Prefabs.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Prefabs/FadeManager.prefab
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Prefabs/FadeManager.prefab.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Sample.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Sample/FadeSample.cs
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Sample/FadeSample.cs.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Sample/SampleScene.unity
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Sample/SampleScene.unity.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Scripts.meta
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Scripts/FadeManager.cs
+ create mode 100644 1week2021_02/Assets/naichilab/FadeManager/Scripts/FadeManager.cs.meta
+pull_count
