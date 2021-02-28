@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class changeSceneManager : MonoBehaviour
 {
     moveCharactor script;
+    hataki script2;
     public GameObject chara;
+    public GameObject hataki;
 
     int count;
 
@@ -15,6 +17,7 @@ public class changeSceneManager : MonoBehaviour
     {
         count = 0;
         script = chara.GetComponent<moveCharactor>();
+        script2 = hataki.GetComponent<hataki>();
     }
 
     // Update is called once per frame
@@ -25,7 +28,13 @@ public class changeSceneManager : MonoBehaviour
         {
             count += 1;
             FadeManager.Instance.LoadScene("GameOver", 0.5f);
-        }else if (script.gameClearFlag && count == 0)
+        }
+        else if(script2.gameOverFlag && count == 0)
+        {
+            count += 1;
+            FadeManager.Instance.LoadScene("GameOver", 0.5f);
+        }
+        else if (script.gameClearFlag && count == 0)
         {
             count += 1;
             FadeManager.Instance.LoadScene("clear", 0.5f);
