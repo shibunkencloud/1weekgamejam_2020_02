@@ -170,7 +170,6 @@ public class moveCharactor : MonoBehaviour
         prevPos = target;
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            target = transform.position + MOVEX;
 
             int ran = UnityEngine.Random.Range(0, 25);
 
