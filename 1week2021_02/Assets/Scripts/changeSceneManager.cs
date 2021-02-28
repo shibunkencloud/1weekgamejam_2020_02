@@ -22,13 +22,13 @@ public class changeSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (script.hataki)
         {
             GameObject hataki = GameObject.Find("hataki(Clone)");
             script2 = hataki.GetComponent<hataki>();
         }
         
-
         if (script.gameOverFlag && count == 0)
         {
             count += 1;

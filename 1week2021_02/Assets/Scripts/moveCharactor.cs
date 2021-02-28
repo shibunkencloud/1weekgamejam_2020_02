@@ -86,7 +86,7 @@ public class moveCharactor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+
         switch (collision.gameObject.name)
         {
             case "leftBrock(Clone)":
