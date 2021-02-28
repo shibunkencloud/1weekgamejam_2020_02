@@ -1,0 +1,52 @@
+Sun Feb 28 17:19:30     2021
+Updating bba4b75..3cb7111
+Fast-forward
+ "1week2021_02/Assets/Images/1week\345\217\263.png" | Bin 1454 -> 1451 bytes
+ .../1week\345\217\263\345\217\215\350\273\242.png" | Bin 1481 -> 1477 bytes
+ "1week2021_02/Assets/Images/1week\345\267\246.png" | Bin 1485 -> 1482 bytes
+ .../1week\345\267\246\345\217\215\350\273\242.png" | Bin 1528 -> 1537 bytes
+ .../Images/1week\345\276\214\343\202\215.png"      | Bin 1280 -> 1277 bytes
+ ...76\214\343\202\215\345\217\215\350\273\242.png" | Bin 1302 -> 1298 bytes
+ .../Images/1week\346\255\243\351\235\242.png"      | Bin 1457 -> 1454 bytes
+ ...75\216\350\247\243\345\203\217\345\272\246.png" | Bin 820 -> 0 bytes
+ ...55\243\351\235\242\345\217\215\350\273\242.png" | Bin 0 -> 1522 bytes
+ ...3\351\235\242\345\217\215\350\273\242.png.meta" |  32 +-
+ 1week2021_02/Assets/Images/game_clear.jpg          | Bin 0 -> 124637 bytes
+ 1week2021_02/Assets/Images/game_clear.jpg.meta     |  92 +++
+ 1week2021_02/Assets/Images/game_description2.jpg   | Bin 0 -> 133990 bytes
+ .../Assets/Images/game_description2.jpg.meta       |  92 +++
+ 1week2021_02/Assets/Images/game_donadona.jpg       | Bin 0 -> 128743 bytes
+ 1week2021_02/Assets/Images/game_donadona.jpg.meta  |  92 +++
+ 1week2021_02/Assets/Images/title.png               | Bin 0 -> 16785 bytes
+ 1week2021_02/Assets/Images/title.png.meta          |  92 +++
+ 1week2021_02/Assets/Resources/downBrock.prefab     |  25 +-
+ 1week2021_02/Assets/Resources/leftBrock.prefab     |  42 +-
+ 1week2021_02/Assets/Scenes/GameOver.unity          | 287 +++++++++
+ 1week2021_02/Assets/Scenes/GameOver.unity.meta     |   7 +
+ 1week2021_02/Assets/Scenes/SampleScene.unity       | 119 +++-
+ 1week2021_02/Assets/changeSceneManager.cs          |  31 +
+ 1week2021_02/Assets/changeSceneManager.cs.meta     |  11 +
+ 1week2021_02/Assets/charaCollision.cs              |  36 ++
+ 1week2021_02/Assets/charaCollision.cs.meta         |  11 +
+ 1week2021_02/Assets/downBrock.cs                   |   4 +-
+ 1week2021_02/Assets/leftBrock.cs                   |   4 +-
+ 1week2021_02/Assets/moveCharactor.cs               | 688 ++++++++++++++++++++-
+ 30 files changed, 1594 insertions(+), 71 deletions(-)
+ delete mode 100644 "1week2021_02/Assets/Images/1week\346\255\243\351\235\242\344\275\216\350\247\243\345\203\217\345\272\246.png"
+ create mode 100644 "1week2021_02/Assets/Images/1week\346\255\243\351\235\242\345\217\215\350\273\242.png"
+ rename "1week2021_02/Assets/Images/1week\346\255\243\351\235\242\344\275\216\350\247\243\345\203\217\345\272\246.png.meta" => "1week2021_02/Assets/Images/1week\346\255\243\351\235\242\345\217\215\350\273\242.png.meta" (72%)
+ create mode 100644 1week2021_02/Assets/Images/game_clear.jpg
+ create mode 100644 1week2021_02/Assets/Images/game_clear.jpg.meta
+ create mode 100644 1week2021_02/Assets/Images/game_description2.jpg
+ create mode 100644 1week2021_02/Assets/Images/game_description2.jpg.meta
+ create mode 100644 1week2021_02/Assets/Images/game_donadona.jpg
+ create mode 100644 1week2021_02/Assets/Images/game_donadona.jpg.meta
+ create mode 100644 1week2021_02/Assets/Images/title.png
+ create mode 100644 1week2021_02/Assets/Images/title.png.meta
+ create mode 100644 1week2021_02/Assets/Scenes/GameOver.unity
+ create mode 100644 1week2021_02/Assets/Scenes/GameOver.unity.meta
+ create mode 100644 1week2021_02/Assets/changeSceneManager.cs
+ create mode 100644 1week2021_02/Assets/changeSceneManager.cs.meta
+ create mode 100644 1week2021_02/Assets/charaCollision.cs
+ create mode 100644 1week2021_02/Assets/charaCollision.cs.meta
+pull_count
