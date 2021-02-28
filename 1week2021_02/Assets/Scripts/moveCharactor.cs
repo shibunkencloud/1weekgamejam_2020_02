@@ -182,7 +182,7 @@ public class moveCharactor : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
 
-            int ran = UnityEngine.Random.Range(0, 20);
+            int ran = UnityEngine.Random.Range(0, 23);
 
             //down
 
@@ -518,7 +518,7 @@ public class moveCharactor : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            int ran = UnityEngine.Random.Range(0, 20);
+            int ran = UnityEngine.Random.Range(0, 23);
 
             if (ran == 0)
             {
@@ -819,7 +819,7 @@ public class moveCharactor : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.UpArrow))
         {
-            int ran = UnityEngine.Random.Range(0, 20);
+            int ran = UnityEngine.Random.Range(0, 23);
 
             if (ran == 0)
             {
@@ -1121,7 +1121,7 @@ public class moveCharactor : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            int ran = UnityEngine.Random.Range(0, 20);
+            int ran = UnityEngine.Random.Range(0, 23);
 
             if (ran == 0)
             {
