@@ -25,6 +25,7 @@ public class moveCharactor : MonoBehaviour
     int vector= 0;
     bool flag = true;
     bool flag2 = true;
+    bool flag3 = true;
 
     leftBrock script;
     downBrock script2;
@@ -42,7 +43,10 @@ public class moveCharactor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+
+
     {
+        
         gameOverFlag = false;
         count = 0;
         target = transform.position;
@@ -55,12 +59,15 @@ public class moveCharactor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(count == 4)
+        
+        if(count == 4 && flag3)
         {
             centerFlas = true;
             Destroy(center);
+            GameObject obj = (GameObject)Resources.Load("hataki");
+            Instantiate(obj, new Vector3(0.6f, -0.6f, -8.0f), Quaternion.identity);
+            flag3 = false;
 
-            
         }
        
         if (transform.position == target)
