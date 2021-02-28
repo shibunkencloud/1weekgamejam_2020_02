@@ -23,7 +23,7 @@ public class changeSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(script2.gameOverFlag);
         if (script.gameOverFlag && count == 0)
         {
             count += 1;
