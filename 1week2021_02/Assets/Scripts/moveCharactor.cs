@@ -25,6 +25,7 @@ public class moveCharactor : MonoBehaviour
     int vector= 0;
     bool flag = true;
     bool flag2 = true;
+    bool flag3 = true;
 
     leftBrock script;
     downBrock script2;
@@ -42,8 +43,12 @@ public class moveCharactor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+
+
     {
+        
         gameOverFlag = false;
+        gameClearFlag = false;
         count = 0;
         target = transform.position;
         MainSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -55,12 +60,15 @@ public class moveCharactor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(count == 4)
+        
+        if(count == 4 && flag3)
         {
             centerFlas = true;
             Destroy(center);
+            GameObject obj = (GameObject)Resources.Load("hataki");
+            Instantiate(obj, new Vector3(0.6f, -0.6f, -9.0f), Quaternion.identity);
+            flag3 = false;
 
-            
         }
        
         if (transform.position == target)
@@ -75,7 +83,7 @@ public class moveCharactor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        Debug.Log(collision.gameObject.name);
         switch (collision.gameObject.name)
         {
             case "leftBrock(Clone)":
@@ -117,7 +125,7 @@ public class moveCharactor : MonoBehaviour
                 }
                 else
                 {
-                    Vector3 tmp = script.target;
+                    Vector3 tmp = script3.target;
                     tmp.x = tmp.x - 0.6f;
                     target.x = tmp.x;
                     Move();
@@ -132,7 +140,7 @@ public class moveCharactor : MonoBehaviour
                 }
                 else
                 {
-                    Vector3 tmp = script.target;
+                    Vector3 tmp = script4.target;
                     tmp.y = tmp.y + 0.6f;
                     target.y = tmp.y;
                     Move();
@@ -145,7 +153,7 @@ public class moveCharactor : MonoBehaviour
                 Debug.Log(count);
                 break;
 
-            case "hataki":
+            case "hataki(Clone)":
                 script5 = collision.GetComponent<hataki>();
                 gameClearFlag = true;
                 break;
@@ -170,7 +178,6 @@ public class moveCharactor : MonoBehaviour
         prevPos = target;
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            target = transform.position + MOVEX;
 
             int ran = UnityEngine.Random.Range(0, 25);
 
@@ -1102,7 +1109,7 @@ public class moveCharactor : MonoBehaviour
             }
             flag = !flag;
             vector = 2;
-            if (this.transform.position.y < 4.5f)
+            if (this.transform.position.y < 4.1f)
             {
                 target = transform.position + MOVEY;
                 return;
